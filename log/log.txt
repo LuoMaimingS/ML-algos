@@ -1,0 +1,510 @@
+Finish processing the 10000th line
+Finish processing the 20000th line
+Finish processing the 30000th line
+Finish processing the 40000th line
+Finish processing the 50000th line
+Finish processing the 60000th line
+Buliding the1layer......  data.shape:(6000, 785)data distribution:[592, 674, 596, 613, 584, 542, 592, 627, 585, 595]
+Linear Classification
+Finish processing the1000th sample, positive values: 3 negative values: 997
+Finish processing the2000th sample, positive values: 11 negative values: 989
+Finish processing the3000th sample, positive values: 452 negative values: 548
+Finish processing the4000th sample, positive values: 65 negative values: 935
+Finish processing the5000th sample, positive values: 6 negative values: 994
+Finish processing the6000th sample, positive values: 13 negative values: 987
+Buliding the2layer......  data.shape:(550, 785)data distribution:[2, 1, 11, 1, 507, 6, 7, 2, 1, 12]
+Linear Classification
+Finish processing the550th sample, positive values: 2 negative values: 548
+Buliding the3layer......  data.shape:(2, 785)data distribution:[2, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer3
+Buliding the3layer......  data.shape:(548, 785)data distribution:[0, 1, 11, 1, 507, 6, 7, 2, 1, 12]
+Linear Classification
+Finish processing the548th sample, positive values: 507 negative values: 41
+Buliding the4layer......  data.shape:(507, 785)data distribution:[0, 0, 0, 0, 507, 0, 0, 0, 0, 0]
+Leave Node in layer4
+Buliding the4layer......  data.shape:(41, 785)data distribution:[0, 1, 11, 1, 0, 6, 7, 2, 1, 12]
+Linear Classification
+Finish processing the41th sample, positive values: 12 negative values: 29
+Buliding the5layer......  data.shape:(12, 785)data distribution:[0, 0, 11, 0, 0, 1, 0, 0, 0, 0]
+Linear Classification
+Finish processing the12th sample, positive values: 12 negative values: 0
+Leave Node in layer5
+Buliding the5layer......  data.shape:(29, 785)data distribution:[0, 1, 0, 1, 0, 5, 7, 2, 1, 12]
+Linear Classification
+Finish processing the29th sample, positive values: 1 negative values: 28
+Buliding the6layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+Leave Node in layer6
+Buliding the6layer......  data.shape:(28, 785)data distribution:[0, 1, 0, 0, 0, 5, 7, 2, 1, 12]
+Linear Classification
+Finish processing the28th sample, positive values: 2 negative values: 26
+Buliding the7layer......  data.shape:(2, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 2, 0, 0]
+Leave Node in layer7
+Buliding the7layer......  data.shape:(26, 785)data distribution:[0, 1, 0, 0, 0, 5, 7, 0, 1, 12]
+Linear Classification
+Finish processing the26th sample, positive values: 1 negative values: 25
+Buliding the8layer......  data.shape:(1, 785)data distribution:[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer8
+Buliding the8layer......  data.shape:(25, 785)data distribution:[0, 0, 0, 0, 0, 5, 7, 0, 1, 12]
+Linear Classification
+Finish processing the25th sample, positive values: 5 negative values: 20
+Buliding the9layer......  data.shape:(5, 785)data distribution:[0, 0, 0, 0, 0, 0, 5, 0, 0, 0]
+Leave Node in layer9
+Buliding the9layer......  data.shape:(20, 785)data distribution:[0, 0, 0, 0, 0, 5, 2, 0, 1, 12]
+Linear Classification
+Finish processing the20th sample, positive values: 11 negative values: 9
+Buliding the10layer......  data.shape:(11, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 0, 11]
+Leave Node in layer10
+Buliding the10layer......  data.shape:(9, 785)data distribution:[0, 0, 0, 0, 0, 5, 2, 0, 1, 1]
+Linear Classification
+Finish processing the9th sample, positive values: 1 negative values: 8
+Buliding the11layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+Leave Node in layer11
+Buliding the11layer......  data.shape:(8, 785)data distribution:[0, 0, 0, 0, 0, 5, 2, 0, 0, 1]
+Linear Classification
+Finish processing the8th sample, positive values: 6 negative values: 2
+Buliding the12layer......  data.shape:(6, 785)data distribution:[0, 0, 0, 0, 0, 5, 0, 0, 0, 1]
+Linear Classification
+Finish processing the6th sample, positive values: 6 negative values: 0
+Leave Node in layer12
+Buliding the12layer......  data.shape:(2, 785)data distribution:[0, 0, 0, 0, 0, 0, 2, 0, 0, 0]
+Leave Node in layer12
+Buliding the2layer......  data.shape:(5450, 785)data distribution:[590, 673, 585, 612, 77, 536, 585, 625, 584, 583]
+Linear Classification
+Finish processing the1000th sample, positive values: 386 negative values: 614
+Finish processing the2000th sample, positive values: 251 negative values: 749
+Finish processing the3000th sample, positive values: 4 negative values: 996
+Finish processing the4000th sample, positive values: 2 negative values: 998
+Finish processing the5000th sample, positive values: 5 negative values: 995
+Finish processing the5450th sample, positive values: 0 negative values: 450
+Buliding the3layer......  data.shape:(648, 785)data distribution:[0, 635, 2, 0, 2, 2, 0, 4, 3, 0]
+Linear Classification
+Finish processing the648th sample, positive values: 636 negative values: 12
+Buliding the4layer......  data.shape:(636, 785)data distribution:[0, 635, 0, 0, 0, 0, 0, 0, 1, 0]
+Linear Classification
+Finish processing the636th sample, positive values: 636 negative values: 0
+Leave Node in layer4
+Buliding the4layer......  data.shape:(12, 785)data distribution:[0, 0, 2, 0, 2, 2, 0, 4, 2, 0]
+Linear Classification
+Finish processing the12th sample, positive values: 0 negative values: 12
+Leave Node in layer4
+Buliding the3layer......  data.shape:(4802, 785)data distribution:[590, 38, 583, 612, 75, 534, 585, 621, 581, 583]
+Linear Classification
+Finish processing the1000th sample, positive values: 17 negative values: 983
+Finish processing the2000th sample, positive values: 0 negative values: 1000
+Finish processing the3000th sample, positive values: 0 negative values: 1000
+Finish processing the4000th sample, positive values: 1 negative values: 999
+Finish processing the4802th sample, positive values: 0 negative values: 802
+Buliding the4layer......  data.shape:(18, 785)data distribution:[0, 17, 0, 0, 0, 0, 0, 0, 1, 0]
+Linear Classification
+Finish processing the18th sample, positive values: 18 negative values: 0
+Leave Node in layer4
+Buliding the4layer......  data.shape:(4784, 785)data distribution:[590, 21, 583, 612, 75, 534, 585, 621, 580, 583]
+Linear Classification
+Finish processing the1000th sample, positive values: 20 negative values: 980
+Finish processing the2000th sample, positive values: 19 negative values: 981
+Finish processing the3000th sample, positive values: 12 negative values: 988
+Finish processing the4000th sample, positive values: 303 negative values: 697
+Finish processing the4784th sample, positive values: 162 negative values: 622
+Buliding the5layer......  data.shape:(516, 785)data distribution:[1, 3, 17, 7, 7, 12, 4, 10, 441, 14]
+Linear Classification
+Finish processing the516th sample, positive values: 439 negative values: 77
+Buliding the6layer......  data.shape:(439, 785)data distribution:[0, 0, 1, 0, 0, 0, 0, 0, 438, 0]
+Linear Classification
+Finish processing the439th sample, positive values: 439 negative values: 0
+Leave Node in layer6
+Buliding the6layer......  data.shape:(77, 785)data distribution:[1, 3, 16, 7, 7, 12, 4, 10, 3, 14]
+Linear Classification
+Finish processing the77th sample, positive values: 2 negative values: 75
+Buliding the7layer......  data.shape:(2, 785)data distribution:[0, 0, 0, 0, 0, 0, 2, 0, 0, 0]
+Leave Node in layer7
+Buliding the7layer......  data.shape:(75, 785)data distribution:[1, 3, 16, 7, 7, 12, 2, 10, 3, 14]
+Linear Classification
+Finish processing the75th sample, positive values: 16 negative values: 59
+Buliding the8layer......  data.shape:(16, 785)data distribution:[0, 0, 16, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer8
+Buliding the8layer......  data.shape:(59, 785)data distribution:[1, 3, 0, 7, 7, 12, 2, 10, 3, 14]
+Linear Classification
+Finish processing the59th sample, positive values: 7 negative values: 52
+Buliding the9layer......  data.shape:(7, 785)data distribution:[0, 0, 0, 0, 7, 0, 0, 0, 0, 0]
+Leave Node in layer9
+Buliding the9layer......  data.shape:(52, 785)data distribution:[1, 3, 0, 7, 0, 12, 2, 10, 3, 14]
+Linear Classification
+Finish processing the52th sample, positive values: 10 negative values: 42
+Buliding the10layer......  data.shape:(10, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 10, 0, 0]
+Leave Node in layer10
+Buliding the10layer......  data.shape:(42, 785)data distribution:[1, 3, 0, 7, 0, 12, 2, 0, 3, 14]
+Linear Classification
+Finish processing the42th sample, positive values: 11 negative values: 31
+Buliding the11layer......  data.shape:(11, 785)data distribution:[0, 0, 0, 0, 0, 11, 0, 0, 0, 0]
+Leave Node in layer11
+Buliding the11layer......  data.shape:(31, 785)data distribution:[1, 3, 0, 7, 0, 1, 2, 0, 3, 14]
+Linear Classification
+Finish processing the31th sample, positive values: 1 negative values: 30
+Buliding the12layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+Leave Node in layer12
+Buliding the12layer......  data.shape:(30, 785)data distribution:[1, 3, 0, 7, 0, 0, 2, 0, 3, 14]
+Linear Classification
+Finish processing the30th sample, positive values: 7 negative values: 23
+Buliding the13layer......  data.shape:(7, 785)data distribution:[0, 0, 0, 7, 0, 0, 0, 0, 0, 0]
+Leave Node in layer13
+Buliding the13layer......  data.shape:(23, 785)data distribution:[1, 3, 0, 0, 0, 0, 2, 0, 3, 14]
+Linear Classification
+Finish processing the23th sample, positive values: 0 negative values: 23
+Leave Node in layer13
+Buliding the5layer......  data.shape:(4268, 785)data distribution:[589, 18, 566, 605, 68, 522, 581, 611, 139, 569]
+Linear Classification
+Finish processing the1000th sample, positive values: 7 negative values: 993
+Finish processing the2000th sample, positive values: 10 negative values: 990
+Finish processing the3000th sample, positive values: 8 negative values: 992
+Finish processing the4000th sample, positive values: 54 negative values: 946
+Finish processing the4268th sample, positive values: 1 negative values: 267
+Buliding the6layer......  data.shape:(80, 785)data distribution:[2, 0, 7, 3, 1, 10, 2, 2, 49, 4]
+Linear Classification
+Finish processing the80th sample, positive values: 50 negative values: 30
+Buliding the7layer......  data.shape:(50, 785)data distribution:[0, 0, 0, 1, 0, 0, 0, 0, 49, 0]
+Linear Classification
+Finish processing the50th sample, positive values: 50 negative values: 0
+Leave Node in layer7
+Buliding the7layer......  data.shape:(30, 785)data distribution:[2, 0, 7, 2, 1, 10, 2, 2, 0, 4]
+Linear Classification
+Finish processing the30th sample, positive values: 0 negative values: 30
+Leave Node in layer7
+Buliding the6layer......  data.shape:(4188, 785)data distribution:[587, 18, 559, 602, 67, 512, 579, 609, 90, 565]
+Linear Classification
+Finish processing the1000th sample, positive values: 12 negative values: 988
+Finish processing the2000th sample, positive values: 13 negative values: 987
+Finish processing the3000th sample, positive values: 554 negative values: 446
+Finish processing the4000th sample, positive values: 1 negative values: 999
+Finish processing the4188th sample, positive values: 0 negative values: 188
+Buliding the7layer......  data.shape:(580, 785)data distribution:[9, 0, 5, 3, 6, 9, 547, 0, 1, 0]
+Linear Classification
+Finish processing the580th sample, positive values: 548 negative values: 32
+Buliding the8layer......  data.shape:(548, 785)data distribution:[0, 0, 0, 0, 0, 1, 546, 0, 1, 0]
+Linear Classification
+Finish processing the548th sample, positive values: 547 negative values: 1
+Buliding the9layer......  data.shape:(547, 785)data distribution:[0, 0, 0, 0, 0, 0, 546, 0, 1, 0]
+Linear Classification
+Finish processing the547th sample, positive values: 547 negative values: 0
+Leave Node in layer9
+Buliding the9layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+Leave Node in layer9
+Buliding the8layer......  data.shape:(32, 785)data distribution:[9, 0, 5, 3, 6, 8, 1, 0, 0, 0]
+Linear Classification
+Finish processing the32th sample, positive values: 6 negative values: 26
+Buliding the9layer......  data.shape:(6, 785)data distribution:[0, 0, 0, 0, 6, 0, 0, 0, 0, 0]
+Leave Node in layer9
+Buliding the9layer......  data.shape:(26, 785)data distribution:[9, 0, 5, 3, 0, 8, 1, 0, 0, 0]
+Linear Classification
+Finish processing the26th sample, positive values: 2 negative values: 24
+Buliding the10layer......  data.shape:(2, 785)data distribution:[0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+Leave Node in layer10
+Buliding the10layer......  data.shape:(24, 785)data distribution:[9, 0, 5, 1, 0, 8, 1, 0, 0, 0]
+Linear Classification
+Finish processing the24th sample, positive values: 9 negative values: 15
+Buliding the11layer......  data.shape:(9, 785)data distribution:[0, 0, 0, 0, 0, 8, 1, 0, 0, 0]
+Linear Classification
+Finish processing the9th sample, positive values: 9 negative values: 0
+Leave Node in layer11
+Buliding the11layer......  data.shape:(15, 785)data distribution:[9, 0, 5, 1, 0, 0, 0, 0, 0, 0]
+Linear Classification
+Finish processing the15th sample, positive values: 10 negative values: 5
+Buliding the12layer......  data.shape:(10, 785)data distribution:[9, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+Linear Classification
+Finish processing the10th sample, positive values: 10 negative values: 0
+Leave Node in layer12
+Buliding the12layer......  data.shape:(5, 785)data distribution:[0, 0, 5, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer12
+Buliding the7layer......  data.shape:(3608, 785)data distribution:[578, 18, 554, 599, 61, 503, 32, 609, 89, 565]
+Linear Classification
+Finish processing the1000th sample, positive values: 582 negative values: 418
+Finish processing the2000th sample, positive values: 13 negative values: 987
+Finish processing the3000th sample, positive values: 13 negative values: 987
+Finish processing the3608th sample, positive values: 9 negative values: 599
+Buliding the8layer......  data.shape:(617, 785)data distribution:[570, 0, 18, 2, 2, 7, 2, 4, 4, 8]
+Linear Classification
+Finish processing the617th sample, positive values: 573 negative values: 44
+Buliding the9layer......  data.shape:(573, 785)data distribution:[570, 0, 1, 0, 1, 0, 0, 0, 0, 1]
+Linear Classification
+Finish processing the573th sample, positive values: 571 negative values: 2
+Buliding the10layer......  data.shape:(571, 785)data distribution:[570, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+Linear Classification
+Finish processing the571th sample, positive values: 571 negative values: 0
+Leave Node in layer10
+Buliding the10layer......  data.shape:(2, 785)data distribution:[0, 0, 1, 0, 1, 0, 0, 0, 0, 0]
+Leave Node in layer10
+Buliding the9layer......  data.shape:(44, 785)data distribution:[0, 0, 17, 2, 1, 7, 2, 4, 4, 7]
+Linear Classification
+Finish processing the44th sample, positive values: 15 negative values: 29
+Buliding the10layer......  data.shape:(15, 785)data distribution:[0, 0, 15, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer10
+Buliding the10layer......  data.shape:(29, 785)data distribution:[0, 0, 2, 2, 1, 7, 2, 4, 4, 7]
+Linear Classification
+Finish processing the29th sample, positive values: 4 negative values: 25
+Buliding the11layer......  data.shape:(4, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 4, 0, 0]
+Leave Node in layer11
+Buliding the11layer......  data.shape:(25, 785)data distribution:[0, 0, 2, 2, 1, 7, 2, 0, 4, 7]
+Linear Classification
+Finish processing the25th sample, positive values: 7 negative values: 18
+Buliding the12layer......  data.shape:(7, 785)data distribution:[0, 0, 0, 0, 0, 7, 0, 0, 0, 0]
+Leave Node in layer12
+Buliding the12layer......  data.shape:(18, 785)data distribution:[0, 0, 2, 2, 1, 0, 2, 0, 4, 7]
+Linear Classification
+Finish processing the18th sample, positive values: 6 negative values: 12
+Buliding the13layer......  data.shape:(6, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 4, 2]
+Linear Classification
+Finish processing the6th sample, positive values: 0 negative values: 6
+Leave Node in layer13
+Buliding the13layer......  data.shape:(12, 785)data distribution:[0, 0, 2, 2, 1, 0, 2, 0, 0, 5]
+Linear Classification
+Finish processing the12th sample, positive values: 1 negative values: 11
+Buliding the14layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+Leave Node in layer14
+Buliding the14layer......  data.shape:(11, 785)data distribution:[0, 0, 2, 2, 0, 0, 2, 0, 0, 5]
+Linear Classification
+Finish processing the11th sample, positive values: 5 negative values: 6
+Buliding the15layer......  data.shape:(5, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 0, 5]
+Leave Node in layer15
+Buliding the15layer......  data.shape:(6, 785)data distribution:[0, 0, 2, 2, 0, 0, 2, 0, 0, 0]
+Linear Classification
+Finish processing the6th sample, positive values: 2 negative values: 4
+Buliding the16layer......  data.shape:(2, 785)data distribution:[0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+Leave Node in layer16
+Buliding the16layer......  data.shape:(4, 785)data distribution:[0, 0, 2, 0, 0, 0, 2, 0, 0, 0]
+Linear Classification
+Finish processing the4th sample, positive values: 3 negative values: 1
+Buliding the17layer......  data.shape:(3, 785)data distribution:[0, 0, 2, 0, 0, 0, 1, 0, 0, 0]
+Leave Node in layer17
+Buliding the17layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+Leave Node in layer17
+Buliding the8layer......  data.shape:(2991, 785)data distribution:[8, 18, 536, 597, 59, 496, 30, 605, 85, 557]
+Linear Classification
+Finish processing the1000th sample, positive values: 10 negative values: 990
+Finish processing the2000th sample, positive values: 36 negative values: 964
+Finish processing the2991th sample, positive values: 509 negative values: 482
+Buliding the9layer......  data.shape:(555, 785)data distribution:[0, 0, 1, 12, 15, 7, 1, 24, 1, 494]
+Linear Classification
+Finish processing the555th sample, positive values: 23 negative values: 532
+Buliding the10layer......  data.shape:(23, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 23, 0, 0]
+Leave Node in layer10
+Buliding the10layer......  data.shape:(532, 785)data distribution:[0, 0, 1, 12, 15, 7, 1, 1, 1, 494]
+Linear Classification
+Finish processing the532th sample, positive values: 495 negative values: 37
+Buliding the11layer......  data.shape:(495, 785)data distribution:[0, 0, 0, 0, 1, 0, 0, 0, 0, 494]
+Linear Classification
+Finish processing the495th sample, positive values: 495 negative values: 0
+Leave Node in layer11
+Buliding the11layer......  data.shape:(37, 785)data distribution:[0, 0, 1, 12, 14, 7, 1, 1, 1, 0]
+Linear Classification
+Finish processing the37th sample, positive values: 8 negative values: 29
+Buliding the12layer......  data.shape:(8, 785)data distribution:[0, 0, 0, 0, 0, 7, 0, 0, 1, 0]
+Linear Classification
+Finish processing the8th sample, positive values: 8 negative values: 0
+Leave Node in layer12
+Buliding the12layer......  data.shape:(29, 785)data distribution:[0, 0, 1, 12, 14, 0, 1, 1, 0, 0]
+Linear Classification
+Finish processing the29th sample, positive values: 14 negative values: 15
+Buliding the13layer......  data.shape:(14, 785)data distribution:[0, 0, 0, 0, 14, 0, 0, 0, 0, 0]
+Leave Node in layer13
+Buliding the13layer......  data.shape:(15, 785)data distribution:[0, 0, 1, 12, 0, 0, 1, 1, 0, 0]
+Linear Classification
+Finish processing the15th sample, positive values: 14 negative values: 1
+Buliding the14layer......  data.shape:(14, 785)data distribution:[0, 0, 0, 12, 0, 0, 1, 1, 0, 0]
+Linear Classification
+Finish processing the14th sample, positive values: 13 negative values: 1
+Buliding the15layer......  data.shape:(13, 785)data distribution:[0, 0, 0, 12, 0, 0, 0, 1, 0, 0]
+Linear Classification
+Finish processing the13th sample, positive values: 0 negative values: 13
+Leave Node in layer15
+Buliding the15layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+Leave Node in layer15
+Buliding the14layer......  data.shape:(1, 785)data distribution:[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer14
+Buliding the9layer......  data.shape:(2436, 785)data distribution:[8, 18, 535, 585, 44, 489, 29, 581, 84, 63]
+Linear Classification
+Finish processing the1000th sample, positive values: 519 negative values: 481
+Finish processing the2000th sample, positive values: 12 negative values: 988
+Finish processing the2436th sample, positive values: 7 negative values: 429
+Buliding the10layer......  data.shape:(538, 785)data distribution:[0, 0, 510, 10, 1, 6, 3, 3, 5, 0]
+Linear Classification
+Finish processing the538th sample, positive values: 509 negative values: 29
+Buliding the11layer......  data.shape:(509, 785)data distribution:[0, 0, 508, 0, 0, 0, 0, 0, 1, 0]
+Linear Classification
+Finish processing the509th sample, positive values: 509 negative values: 0
+Leave Node in layer11
+Buliding the11layer......  data.shape:(29, 785)data distribution:[0, 0, 2, 10, 1, 6, 3, 3, 4, 0]
+Linear Classification
+Finish processing the29th sample, positive values: 2 negative values: 27
+Buliding the12layer......  data.shape:(2, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 2, 0]
+Leave Node in layer12
+Buliding the12layer......  data.shape:(27, 785)data distribution:[0, 0, 2, 10, 1, 6, 3, 3, 2, 0]
+Linear Classification
+Finish processing the27th sample, positive values: 10 negative values: 17
+Buliding the13layer......  data.shape:(10, 785)data distribution:[0, 0, 0, 10, 0, 0, 0, 0, 0, 0]
+Leave Node in layer13
+Buliding the13layer......  data.shape:(17, 785)data distribution:[0, 0, 2, 0, 1, 6, 3, 3, 2, 0]
+Linear Classification
+Finish processing the17th sample, positive values: 6 negative values: 11
+Buliding the14layer......  data.shape:(6, 785)data distribution:[0, 0, 0, 0, 0, 6, 0, 0, 0, 0]
+Leave Node in layer14
+Buliding the14layer......  data.shape:(11, 785)data distribution:[0, 0, 2, 0, 1, 0, 3, 3, 2, 0]
+Linear Classification
+Finish processing the11th sample, positive values: 1 negative values: 10
+Buliding the15layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+Leave Node in layer15
+Buliding the15layer......  data.shape:(10, 785)data distribution:[0, 0, 2, 0, 0, 0, 3, 3, 2, 0]
+Linear Classification
+Finish processing the10th sample, positive values: 1 negative values: 9
+Buliding the16layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+Leave Node in layer16
+Buliding the16layer......  data.shape:(9, 785)data distribution:[0, 0, 2, 0, 0, 0, 3, 2, 2, 0]
+Linear Classification
+Finish processing the9th sample, positive values: 0 negative values: 9
+Leave Node in layer16
+Buliding the10layer......  data.shape:(1898, 785)data distribution:[8, 18, 25, 575, 43, 483, 26, 578, 79, 63]
+Linear Classification
+Finish processing the1000th sample, positive values: 4 negative values: 996
+Finish processing the1898th sample, positive values: 575 negative values: 323
+Buliding the11layer......  data.shape:(579, 785)data distribution:[0, 0, 1, 2, 1, 0, 0, 569, 1, 5]
+Linear Classification
+Finish processing the579th sample, positive values: 570 negative values: 9
+Buliding the12layer......  data.shape:(570, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 569, 0, 1]
+Linear Classification
+Finish processing the570th sample, positive values: 570 negative values: 0
+Leave Node in layer12
+Buliding the12layer......  data.shape:(9, 785)data distribution:[0, 0, 1, 2, 1, 0, 0, 0, 1, 4]
+Linear Classification
+Finish processing the9th sample, positive values: 1 negative values: 8
+Buliding the13layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+Leave Node in layer13
+Buliding the13layer......  data.shape:(8, 785)data distribution:[0, 0, 1, 1, 1, 0, 0, 0, 1, 4]
+Linear Classification
+Finish processing the8th sample, positive values: 1 negative values: 7
+Buliding the14layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+Leave Node in layer14
+Buliding the14layer......  data.shape:(7, 785)data distribution:[0, 0, 1, 1, 0, 0, 0, 0, 1, 4]
+Linear Classification
+Finish processing the7th sample, positive values: 4 negative values: 3
+Buliding the15layer......  data.shape:(4, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 0, 4]
+Leave Node in layer15
+Buliding the15layer......  data.shape:(3, 785)data distribution:[0, 0, 1, 1, 0, 0, 0, 0, 1, 0]
+Leave Node in layer15
+Buliding the11layer......  data.shape:(1319, 785)data distribution:[8, 18, 24, 573, 42, 483, 26, 9, 78, 58]
+Linear Classification
+Finish processing the1000th sample, positive values: 583 negative values: 417
+Finish processing the1319th sample, positive values: 29 negative values: 290
+Buliding the12layer......  data.shape:(612, 785)data distribution:[0, 4, 4, 558, 2, 24, 0, 1, 14, 5]
+Linear Classification
+Finish processing the612th sample, positive values: 559 negative values: 53
+Buliding the13layer......  data.shape:(559, 785)data distribution:[0, 0, 0, 552, 0, 2, 0, 1, 0, 4]
+Linear Classification
+Finish processing the559th sample, positive values: 554 negative values: 5
+Buliding the14layer......  data.shape:(554, 785)data distribution:[0, 0, 0, 552, 0, 0, 0, 1, 0, 1]
+Linear Classification
+Finish processing the554th sample, positive values: 553 negative values: 1
+Buliding the15layer......  data.shape:(553, 785)data distribution:[0, 0, 0, 552, 0, 0, 0, 0, 0, 1]
+Linear Classification
+Finish processing the553th sample, positive values: 553 negative values: 0
+Leave Node in layer15
+Buliding the15layer......  data.shape:(1, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+Leave Node in layer15
+Buliding the14layer......  data.shape:(5, 785)data distribution:[0, 0, 0, 0, 0, 2, 0, 0, 0, 3]
+Linear Classification
+Finish processing the5th sample, positive values: 2 negative values: 3
+Buliding the15layer......  data.shape:(2, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
+Leave Node in layer15
+Buliding the15layer......  data.shape:(3, 785)data distribution:[0, 0, 0, 0, 0, 2, 0, 0, 0, 1]
+Leave Node in layer15
+Buliding the13layer......  data.shape:(53, 785)data distribution:[0, 4, 4, 6, 2, 22, 0, 0, 14, 1]
+Linear Classification
+Finish processing the53th sample, positive values: 21 negative values: 32
+Buliding the14layer......  data.shape:(21, 785)data distribution:[0, 0, 0, 0, 0, 21, 0, 0, 0, 0]
+Leave Node in layer14
+Buliding the14layer......  data.shape:(32, 785)data distribution:[0, 4, 4, 6, 2, 1, 0, 0, 14, 1]
+Linear Classification
+Finish processing the32th sample, positive values: 14 negative values: 18
+Buliding the15layer......  data.shape:(14, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 14, 0]
+Leave Node in layer15
+Buliding the15layer......  data.shape:(18, 785)data distribution:[0, 4, 4, 6, 2, 1, 0, 0, 0, 1]
+Linear Classification
+Finish processing the18th sample, positive values: 3 negative values: 15
+Buliding the16layer......  data.shape:(3, 785)data distribution:[0, 0, 3, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer16
+Buliding the16layer......  data.shape:(15, 785)data distribution:[0, 4, 1, 6, 2, 1, 0, 0, 0, 1]
+Linear Classification
+Finish processing the15th sample, positive values: 1 negative values: 14
+Buliding the17layer......  data.shape:(1, 785)data distribution:[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer17
+Buliding the17layer......  data.shape:(14, 785)data distribution:[0, 4, 0, 6, 2, 1, 0, 0, 0, 1]
+Linear Classification
+Finish processing the14th sample, positive values: 0 negative values: 14
+Leave Node in layer17
+Buliding the12layer......  data.shape:(707, 785)data distribution:[8, 14, 20, 15, 40, 459, 26, 8, 64, 53]
+Linear Classification
+Finish processing the707th sample, positive values: 457 negative values: 250
+Buliding the13layer......  data.shape:(457, 785)data distribution:[0, 0, 2, 1, 0, 453, 1, 0, 0, 0]
+Linear Classification
+Finish processing the457th sample, positive values: 454 negative values: 3
+Buliding the14layer......  data.shape:(454, 785)data distribution:[0, 0, 0, 0, 0, 453, 1, 0, 0, 0]
+Linear Classification
+Finish processing the454th sample, positive values: 454 negative values: 0
+Leave Node in layer14
+Buliding the14layer......  data.shape:(3, 785)data distribution:[0, 0, 2, 1, 0, 0, 0, 0, 0, 0]
+Leave Node in layer14
+Buliding the13layer......  data.shape:(250, 785)data distribution:[8, 14, 18, 14, 40, 6, 25, 8, 64, 53]
+Linear Classification
+Finish processing the250th sample, positive values: 19 negative values: 231
+Buliding the14layer......  data.shape:(19, 785)data distribution:[0, 0, 18, 0, 0, 0, 1, 0, 0, 0]
+Linear Classification
+Finish processing the19th sample, positive values: 19 negative values: 0
+Leave Node in layer14
+Buliding the14layer......  data.shape:(231, 785)data distribution:[8, 14, 0, 14, 40, 6, 24, 8, 64, 53]
+Linear Classification
+Finish processing the231th sample, positive values: 51 negative values: 180
+Buliding the15layer......  data.shape:(51, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 1, 1, 49]
+Linear Classification
+Finish processing the51th sample, positive values: 48 negative values: 3
+Buliding the16layer......  data.shape:(48, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 0, 48]
+Leave Node in layer16
+Buliding the16layer......  data.shape:(3, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+Leave Node in layer16
+Buliding the15layer......  data.shape:(180, 785)data distribution:[8, 14, 0, 14, 40, 6, 24, 7, 63, 4]
+Linear Classification
+Finish processing the180th sample, positive values: 62 negative values: 118
+Buliding the16layer......  data.shape:(62, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 62, 0]
+Leave Node in layer16
+Buliding the16layer......  data.shape:(118, 785)data distribution:[8, 14, 0, 14, 40, 6, 24, 7, 1, 4]
+Linear Classification
+Finish processing the118th sample, positive values: 40 negative values: 78
+Buliding the17layer......  data.shape:(40, 785)data distribution:[0, 0, 0, 0, 40, 0, 0, 0, 0, 0]
+Leave Node in layer17
+Buliding the17layer......  data.shape:(78, 785)data distribution:[8, 14, 0, 14, 0, 6, 24, 7, 1, 4]
+Linear Classification
+Finish processing the78th sample, positive values: 13 negative values: 65
+Buliding the18layer......  data.shape:(13, 785)data distribution:[0, 13, 0, 0, 0, 0, 0, 0, 0, 0]
+Leave Node in layer18
+Buliding the18layer......  data.shape:(65, 785)data distribution:[8, 1, 0, 14, 0, 6, 24, 7, 1, 4]
+Linear Classification
+Finish processing the65th sample, positive values: 2 negative values: 63
+Buliding the19layer......  data.shape:(2, 785)data distribution:[0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
+Leave Node in layer19
+Buliding the19layer......  data.shape:(63, 785)data distribution:[8, 1, 0, 14, 0, 6, 24, 7, 1, 2]
+Linear Classification
+Finish processing the63th sample, positive values: 13 negative values: 50
+Buliding the20layer......  data.shape:(13, 785)data distribution:[0, 0, 0, 13, 0, 0, 0, 0, 0, 0]
+Leave Node in layer20
+Buliding the20layer......  data.shape:(50, 785)data distribution:[8, 1, 0, 1, 0, 6, 24, 7, 1, 2]
+Linear Classification
+Finish processing the50th sample, positive values: 24 negative values: 26
+Buliding the21layer......  data.shape:(24, 785)data distribution:[0, 0, 0, 0, 0, 0, 24, 0, 0, 0]
+Leave Node in layer21
+Buliding the21layer......  data.shape:(26, 785)data distribution:[8, 1, 0, 1, 0, 6, 0, 7, 1, 2]
+Linear Classification
+Finish processing the26th sample, positive values: 6 negative values: 20
+Buliding the22layer......  data.shape:(6, 785)data distribution:[0, 0, 0, 0, 0, 6, 0, 0, 0, 0]
+Leave Node in layer22
+Buliding the22layer......  data.shape:(20, 785)data distribution:[8, 1, 0, 1, 0, 0, 0, 7, 1, 2]
+Linear Classification
+Finish processing the20th sample, positive values: 0 negative values: 20
+Leave Node in layer22
+Tree built! the shape of data for training:(6000, 785)
+Testing Finished!  Accuracy =0.8647

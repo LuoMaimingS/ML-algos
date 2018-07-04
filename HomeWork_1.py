@@ -9,6 +9,8 @@
 from tools import *
 import numpy as np
 
+np.seterr(divide='ignore', invalid='ignore')
+
 maxdepth = 10000
 e = 0.01
 m = 3
@@ -35,22 +37,23 @@ class Node:
             return self.R.Test_Tree(x)
 
 
-
 def Build_Tree(data, m, e, depth, maxdepth):
     root = Build_Tree_Recursion(data, m, e, depth, maxdepth)
     return root
 
 
 def Build_Tree_Recursion(data, m, e, depth, maxdepth):
-    print("Buliding the ", depth, "layer......")
     c = get_distribution_list(data)
-    if len(data) <= m or (not is_distinct(data)) or depth >= maxdepth:
-        print("Leave Node in layer", depth)
+    print("Building the", depth, "layer......  data.shape", data.shape, "data.distribution:",c)
+    f_out.write("Buliding the" + str(depth) + "layer......  data.shape:" + str(data.shape) + "data distribution:"
+                + str(c) + '\n')
+    if len(data) <= m or is_distinct(data) or depth >= maxdepth:
+        f_out.write("Leave Node in layer" + str(depth) + '\n')
         return Node(None, None, c)
-    w, b = Linear(data, e)
+    w, b = Linear(data, c, e)
 
-    DL = np.zeros((1,785))
-    DR = np.zeros((1,785))
+    DL = np.zeros((1, 785))
+    DR = np.zeros((1, 785))
     count_pos = 0
     count_neg = 0
     for i in range(len(data)):
@@ -65,28 +68,26 @@ def Build_Tree_Recursion(data, m, e, depth, maxdepth):
         else:
             count_neg += 1
             DR = np.concatenate((DR, xt), axis=0)
-        if i % 1000 == 0 or i == (len(data) - 1):
-            print("Finish processing the ", i, "th sample, positive values: ", count_pos, " negative values: ", count_neg)
+        if (i + 1) % 1000 == 0 or i == (len(data) - 1):
+            print("Finish processing the", i + 1, "th sample, positive values: ", count_pos,
+                  " negative values: ", count_neg)
+            f_out.write("Finish processing the" + str(i + 1) + "th sample, positive values: " + str(count_pos)
+                        + " negative values: " + str(count_neg) + '\n')
             count_pos = 0
             count_neg = 0
     DL = np.delete(DL, 0, 0)
     DR = np.delete(DR, 0, 0)
-    print(DL.shape, DR.shape, c)
+    print(DL.shape, DR.shape)
+    if DL.shape[0] == 0 or DR.shape[0] == 0:
+        f_out.write("Leave Node in layer" + str(depth) + '\n')
+        return Node(None, None, c)
     return Node(Build_Tree_Recursion(DL, m, e, depth + 1, maxdepth), Build_Tree_Recursion(DR, m, e, depth + 1, maxdepth), c, w, b)
 
 
-def Linear(data, e):
-    print("Linear Classification")
+def Linear(data, c, e):
+    f_out.write("Linear Classification" + '\n')
     # 随机过程
-    temp_random = np.random.randint(0, len(data) - 1)
-    xt_positive = data[temp_random]
-    positive_label = xt_positive[-1]
-    temp_random = np.random.randint(0, len(data) - 1)
-    while data[temp_random][-1] == positive_label:
-        temp_random = np.random.randint(0, len(data) - 1)
-    xt_negative = data[temp_random]
-    x_positive = xt_positive[:-1]
-    x_negative = xt_negative[:-1]
+    x_positive, x_negative, positive_label = random_sample_from_data(data, c)
 
     w = []
     b = []
@@ -95,7 +96,7 @@ def Linear(data, e):
     w.append(w0)
     b.append(b0)
     # print(w0)
-    print("b0:", b0, end="    ")
+    # print("b0:", b0, end="    ")
     T = int(1 / np.square(e))
     for t in range(1, T):
         temp_random = np.random.randint(0, len(data) - 1)
@@ -116,45 +117,46 @@ def Linear(data, e):
         b.append(b_temp)
         if (t % len(data) == 0) and np.vdot((w[t] - w[t - len(data)]), (w[t] - w[t - len(data)])) < 0.001:
             break
-    print("w calculated, b[T]:",b[-1])
-    print("End of the loop of the linear classification, Return! ")
+    # print("w calculated, b[T]:", b[-1])
+    # print("End of the loop of the linear classification, Return! ")
     return w[-1], b[-1]
 
 
 if __name__ == '__main__':
     # Training Process
-    with open('D:/NJU/览笛培训/作业+作业数据集/作业+作业数据集/mnistTrain_scale.txt', 'r') as f_in:
+    with open('D:/git/data/mnistTrain_scale.txt', 'r') as f_in:
         lines = f_in.readlines()
-    data = np.zeros((6000, 785))
-    for i in range(len(lines)):
-        if i % 10 == 0:
-            temp = eval(lines[i])
-            p = int(i / 10)
-            data[p] = temp
-            if i % 10000 == 0:
-                print("Finish processing the ", i, "th line")
-    # 建立决策树
-    tree = Build_Tree(data, m, e, 1, maxdepth)
-    print(data.shape)
+    with open('D:/git/ML-algos/log/log.txt', 'w') as f_out:
+        data = np.zeros((6000, 785))
+        for i in range(len(lines)):
+            if (i + 1) % 10 == 0:
+                temp = eval(lines[i])
+                p = int(i / 10)
+                data[p] = temp
+                if (i + 1) % 10000 == 0:
+                    f_out.write("Finish processing the " + str(i + 1) + "th line" + '\n')
+        # 建立决策树
+        tree = Build_Tree(data, m, e, 1, maxdepth)
+        f_out.write("Tree built! the shape of data for training:" + str(data.shape) + '\n')
 
-    # Testing Process
-    with open('D:/NJU/览笛培训/作业+作业数据集/作业+作业数据集/mnistTest_scale.txt', 'r') as f_in:
-        lines = f_in.readlines()
-    count_correct = 0
-    for i in range(len(lines)):
-        test_data = np.array(eval(lines[i]))[:-1]
-        label = np.array(eval(lines[i]))[-1]
-        value_list = tree.Test_Tree(test_data)
-        value = 0
-        pos = 0
-        for j in range(len(value_list)):
-            if value_list[j] > value:
-                value = value_list[j]
-                pos = j
-        if label == pos:
-            count_correct += 1
-    accuracy = count_correct / len(lines)
-    print("Testing Finished!  Accuracy =", accuracy)
+        # Testing Process
+        with open('D:/git/data/mnistTest_scale.txt', 'r') as f_in:
+            lines = f_in.readlines()
+        count_correct = 0
+        for i in range(len(lines)):
+            test_data = np.array(eval(lines[i]))[:-1]
+            label = np.array(eval(lines[i]))[-1]
+            value_list = tree.Test_Tree(test_data)
+            value = 0
+            pos = 0
+            for j in range(len(value_list)):
+                if value_list[j] > value:
+                    value = value_list[j]
+                    pos = j
+            if label == pos:
+                count_correct += 1
+        accuracy = count_correct / len(lines)
+        f_out.write("Testing Finished!  Accuracy =" + str(accuracy))
 
 
 
