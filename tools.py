@@ -1,4 +1,4 @@
-# coding utf-8
+# coding=utf-8
 
 import numpy as np
 
@@ -8,13 +8,6 @@ def get_distribution_list(data):
     for i in range(len(data)):
         label = int(data[i, -1])
         c[label] += 1
-    return c
-
-
-def get_class_distribution(data):
-    c = []
-    for i in range(len(data)):
-        c.append(data[i][-1])
     return c
 
 
@@ -30,9 +23,8 @@ def is_distinct(data):
         return False
 
 
-
 def random_sample_from_data(data, c):
-    temp_random = np.random.randint(0, len(data) - 1)
+    temp_random = np.random.randint(0, len(data))
     xt_positive = data[temp_random]
     positive_label = xt_positive[-1]
     count_negative = 0

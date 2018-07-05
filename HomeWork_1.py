@@ -14,7 +14,7 @@ np.seterr(divide='ignore', invalid='ignore')
 maxdepth = 10000
 e = 0.01
 m = 3
-
+S = 10
 
 # 叶子节点
 class Node:
@@ -45,10 +45,10 @@ def Build_Tree(data, m, e, depth, maxdepth):
 def Build_Tree_Recursion(data, m, e, depth, maxdepth):
     c = get_distribution_list(data)
     print("Building the", depth, "layer......  data.shape", data.shape, "data.distribution:",c)
-    f_out.write("Buliding the" + str(depth) + "layer......  data.shape:" + str(data.shape) + "data distribution:"
-                + str(c) + '\n')
+    # f_out.write("Buliding the" + str(depth) + "layer......  data.shape:" + str(data.shape) + "data distribution:"
+    #             + str(c) + '\n')
     if len(data) <= m or is_distinct(data) or depth >= maxdepth:
-        f_out.write("Leave Node in layer" + str(depth) + '\n')
+        # f_out.write("Leave Node in layer" + str(depth) + '\n')
         return Node(None, None, c)
     w, b = Linear(data, c, e)
 
@@ -71,21 +71,21 @@ def Build_Tree_Recursion(data, m, e, depth, maxdepth):
         if (i + 1) % 1000 == 0 or i == (len(data) - 1):
             print("Finish processing the", i + 1, "th sample, positive values: ", count_pos,
                   " negative values: ", count_neg)
-            f_out.write("Finish processing the" + str(i + 1) + "th sample, positive values: " + str(count_pos)
-                        + " negative values: " + str(count_neg) + '\n')
+            # f_out.write("Finish processing the" + str(i + 1) + "th sample, positive values: " + str(count_pos)
+            #             + " negative values: " + str(count_neg) + '\n')
             count_pos = 0
             count_neg = 0
     DL = np.delete(DL, 0, 0)
     DR = np.delete(DR, 0, 0)
     print(DL.shape, DR.shape)
     if DL.shape[0] == 0 or DR.shape[0] == 0:
-        f_out.write("Leave Node in layer" + str(depth) + '\n')
+        # f_out.write("Leave Node in layer" + str(depth) + '\n')
         return Node(None, None, c)
     return Node(Build_Tree_Recursion(DL, m, e, depth + 1, maxdepth), Build_Tree_Recursion(DR, m, e, depth + 1, maxdepth), c, w, b)
 
 
 def Linear(data, c, e):
-    f_out.write("Linear Classification" + '\n')
+    # f_out.write("Linear Classification" + '\n')
     # 随机过程
     x_positive, x_negative, positive_label = random_sample_from_data(data, c)
 
@@ -99,7 +99,7 @@ def Linear(data, c, e):
     # print("b0:", b0, end="    ")
     T = int(1 / np.square(e))
     for t in range(1, T):
-        temp_random = np.random.randint(0, len(data) - 1)
+        temp_random = np.random.randint(0, data.shape[0])
         xt = data[temp_random]
         x = xt[:-1]
         x_label = xt[-1]
