@@ -1,9 +1,10 @@
 # coding=utf-8
 
 '''
-该文件实现一个决策树，基于树形结构而非队列
+该文件实现一个随机森林，基于树形结构而非队列
 运行后可得到Testing数据集的accuracy
 需要改变数据集读取路径
+其中S为决策树的集成规模
 '''
 
 from tools import *
@@ -14,7 +15,8 @@ np.seterr(divide='ignore', invalid='ignore')
 maxdepth = 10000
 e = 0.01
 m = 3
-S = 10
+S = 2
+
 
 # 叶子节点
 class Node:
@@ -50,7 +52,7 @@ def Build_Tree_Recursion(data, m, e, depth, maxdepth):
     if len(data) <= m or is_distinct(data) or depth >= maxdepth:
         # f_out.write("Leave Node in layer" + str(depth) + '\n')
         return Node(None, None, c)
-    w, b = Linear(data, c, e)
+    w, b, positive_label = Linear(data, e)
 
     DL = np.zeros((1, 785))
     DR = np.zeros((1, 785))
@@ -84,17 +86,14 @@ def Build_Tree_Recursion(data, m, e, depth, maxdepth):
     return Node(Build_Tree_Recursion(DL, m, e, depth + 1, maxdepth), Build_Tree_Recursion(DR, m, e, depth + 1, maxdepth), c, w, b)
 
 
-def Linear(data, c, e):
+def Linear(data, e):
     # f_out.write("Linear Classification" + '\n')
     # 随机过程
+    c = get_distribution_list(data)
     x_positive, x_negative, positive_label = random_sample_from_data(data, c)
 
-    w = []
-    b = []
-    w0 = (x_positive - x_negative) / np.linalg.norm(x_positive - x_negative)
-    b0 = (np.vdot(w0, x_positive) + np.vdot(w0, x_negative)) / 2
-    w.append(w0)
-    b.append(b0)
+    w = [(x_positive - x_negative) / np.linalg.norm(x_positive - x_negative)]
+    b = [(np.vdot(w[0], x_positive) + np.vdot(w[0], x_negative)) / 2]
     # print(w0)
     # print("b0:", b0, end="    ")
     T = int(1 / np.square(e))
@@ -119,10 +118,55 @@ def Linear(data, c, e):
             break
     # print("w calculated, b[T]:", b[-1])
     # print("End of the loop of the linear classification, Return! ")
-    return w[-1], b[-1]
+    return w[-1], b[-1], positive_label
 
 
 if __name__ == '__main__':
+    # 随机森林
+    # Training Process
+    with open('D:/git/data/mnistTrain_scale.txt', 'r') as f_in:
+        lines = f_in.readlines()
+    with open('D:/git/ML-algos/log/log.txt', 'w') as f_out:
+        data = np.zeros((6000, 785))
+        for i in range(len(lines)):
+            if (i + 1) % 10 == 0:
+                temp = eval(lines[i])
+                p = int(i / 10)
+                data[p] = temp
+                if (i + 1) % 10000 == 0:
+                    print("Finish processing the ", i + 1, "th line" )
+        # 建立决策树
+        tree_list = []
+        for i in range(S):
+            tree = Build_Tree(data, m, e, 1, maxdepth)
+            tree_list.append(tree)
+            print(i, " th Tree built! the shape of data for training:", data.shape)
+            f_out.write(str(i) + " th Tree built! the shape of data for training:" + str(data.shape) + '\n')
+
+        # Testing Process
+        with open('D:/git/data/mnistTest_scale.txt', 'r') as f_in:
+            lines = f_in.readlines()
+        count_correct = 0
+        for i in range(len(lines)):
+            test_data = np.array(eval(lines[i]))[:-1]
+            label = np.array(eval(lines[i]))[-1]
+            value_list = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            for j in range(S):
+                for l in range(len(value_list)):
+                    value_list[l] += tree_list[j].Test_Tree(test_data)[l]
+                f_out.write(str(value_list) + '\n')
+            value = 0
+            pos = 0
+            for j in range(len(value_list)):
+                if value_list[j] > value:
+                    value = value_list[j]
+                    pos = j
+            if label == pos:
+                count_correct += 1
+        accuracy = count_correct / len(lines)
+        f_out.write("Testing Finished!  Accuracy =" + str(accuracy))
+    '''
+    # 单棵决策树
     # Training Process
     with open('D:/git/data/mnistTrain_scale.txt', 'r') as f_in:
         lines = f_in.readlines()
@@ -157,6 +201,7 @@ if __name__ == '__main__':
                 count_correct += 1
         accuracy = count_correct / len(lines)
         f_out.write("Testing Finished!  Accuracy =" + str(accuracy))
+    '''
 
 
 
