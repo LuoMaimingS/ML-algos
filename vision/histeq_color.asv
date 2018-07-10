@@ -1,6 +1,0 @@
-function EI = histeq_color(I)
-[row, col, channel] = size(I);
-EI = zeros(row, col, channel);
-for t = 1:3
-    
-end
