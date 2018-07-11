@@ -40,21 +40,24 @@ def k_means_clustering(data, k):
                 if dis < min_dis:
                     min_dis = dis
                     tag = i
-                    print(dis)
+                    # print(dis)
             c[tag].append(data[j])
         # calculate new mean_vectors
-        update_flag = False
+        # update_flag = True
         for i in range(k):
             sum_vector = np.zeros((1, data.shape[1]))
             for j in range(len(c[i])):
                 sum_vector += c[i][j]
             new_mean_vector = sum_vector / len(c[i])
-            if np.linalg.norm(new_mean_vector - means_vector[i]) < 0.01:
-                means_vector[i] = new_mean_vector
-                update_flag = True
+            print(np.linalg.norm(new_mean_vector - means_vector[i]), end=' ')
+            if np.linalg.norm(new_mean_vector - means_vector[i]) < 0.001:
+                update_flag = False
+            means_vector[i] = new_mean_vector
+        print('')
     print("clustering finished!")
     for i in range(len(c)):
         print("scale of cluster", i + 1, ":", len(c[i]))
+        print("mean_vector:", means_vector[i])
 
 
 if  __name__ == '__main__':
